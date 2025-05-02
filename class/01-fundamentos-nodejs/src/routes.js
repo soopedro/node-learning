@@ -24,9 +24,14 @@ export const routes = [
         name: name,
         email: email,
       };
-  
+
       database.insert("users", user);
       return res.writeHead(201).end();
     },
+  },
+  {
+    method: "DELETE",
+    path: `/users/${id}`,
+    handler: (req, res) => {},
   },
 ];
